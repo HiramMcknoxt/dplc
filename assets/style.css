@@ -1,0 +1,42 @@
+
+:root{
+  --ink:#1c2434; --muted:#5b6577; --blue:#123a6d; --blue2:#1f559e;
+  --red:#b02a30; --line:#d7dce4; --bg:#f7f8fa; --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+.wrap{max-width:920px;margin:0 auto;padding:0 18px}
+a{color:var(--blue2)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+header{background:var(--blue);color:#fff;padding:20px 0 14px;border-bottom:5px solid var(--red)}
+header .kicker{margin:0;text-transform:uppercase;letter-spacing:.22em;font-size:.7rem;color:#cfe0f5}
+header h1{margin:2px 0 4px;font-size:1.75rem;line-height:1.2}
+header h1 a{color:#fff;text-decoration:none}
+header .sub{margin:0 0 10px;color:#cfe0f5;font-size:.95rem}
+nav{font-size:.93rem}
+nav a{color:#fff;text-decoration:none;margin-right:15px;padding-bottom:2px}
+nav a:hover{text-decoration:underline}
+nav a.on{border-bottom:2px solid #fff;font-weight:bold}
+main{padding:24px 18px 42px}
+h2{margin-top:1.5em;border-bottom:1px solid var(--line);padding-bottom:4px;color:var(--blue)}
+h3{color:var(--blue)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin:18px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:14px 16px}
+.card h3{margin:0 0 6px;font-size:1.05rem}
+.card p{margin:0;color:var(--muted);font-size:.95rem}
+table{border-collapse:collapse;width:100%;margin:14px 0;font-size:.95rem;background:var(--card)}
+th,td{border:1px solid var(--line);padding:7px 9px;text-align:left;vertical-align:top}
+th{background:#eef2f8;color:var(--blue)}
+.btn{display:inline-block;background:var(--red);color:#fff;text-decoration:none;padding:9px 16px;border-radius:5px;font-weight:bold;margin:4px 8px 4px 0}
+.btn.blue{background:var(--blue)}
+.btn:hover{filter:brightness(1.1)}
+blockquote{border-left:4px solid var(--red);margin:16px 0;padding:4px 16px;background:var(--card);font-style:italic}
+.notice{border:1px solid var(--red);border-left:6px solid var(--red);background:#fdf1f1;border-radius:4px;padding:12px 16px;margin:16px 0}
+.empty{border:1px dashed var(--muted);border-radius:4px;padding:14px 16px;background:var(--card)}
+.small{font-size:.88rem;color:var(--muted)}
+ul.tight li{margin-bottom:4px}
+footer{border-top:1px solid var(--line);background:var(--card);padding:18px 0 30px;margin-top:10px}
+footer nav a{color:var(--blue2)}
+.bylaws h3{margin-top:1.4em}
+.review-tag{display:inline-block;background:var(--red);color:#fff;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;border-radius:3px;padding:2px 8px;vertical-align:middle}
+@media (max-width:560px){header h1{font-size:1.4rem}nav a{margin-right:10px}}

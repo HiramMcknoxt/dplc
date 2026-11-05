@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meetings & Events · Democratic Party of Lonoke County</title>
+<meta name="description" content="Monthly meetings and events of the Democratic Party of Lonoke County, with a date-aware archive.">
+<link rel="canonical" href="https://hirammcknoxt.github.io/dplc/events.html">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header><div class="wrap">
+<p class="kicker">Lonoke County, Arkansas</p>
+<h1><a href="index.html">Democratic Party of Lonoke County</a></h1>
+<p class="sub">The certified county committee of the Democratic Party of Arkansas for Lonoke County.</p>
+<nav><a href="index.html">Home</a><a href="about.html">About</a><a href="platform.html">Platform</a><a href="clean-money.html">Clean Money Rule</a><a href="candidates.html">2026 Nominees</a><a href="events.html" class="on">Meetings & Events</a><a href="towns.html">Who We Serve</a><a href="bylaws.html">Bylaws</a><a href="contact.html">Contact</a></nav>
+</div></header>
+<main class="wrap">
+
+<h2>Meetings &amp; Events</h2>
+<p>The County Committee meets monthly. Under §402 of the bylaws, the committee sets its
+regular meeting schedule — including time, date, and location — by vote at its first meeting
+of the calendar year, and the Secretary gives written notice at least five days before each
+meeting. All public meetings are open to all members of the Democratic Party.</p>
+<p class="small">This page is date-aware: events move to the archive below automatically
+once their date has passed.</p>
+<h3>Upcoming</h3>
+<div id="upcoming">
+  <div class="card event" data-date="2026-11-26">
+    <h3>DPLC Monthly Meeting</h3>
+    <p><strong>Thursday, November 26, 2026 · 6:30–8:00 p.m.</strong><br>
+    The regular monthly meeting of the County Committee.</p>
+  </div>
+  <div class="card event" data-date="2026-12-02">
+    <h3>Field Organizing Committee</h3>
+    <p><strong>Wednesday, December 2, 2026</strong><br>
+    Field organizing committee meeting. (Time as announced by the Secretary's meeting
+    notice.)</p>
+  </div>
+</div>
+<p id="no-upcoming" class="empty" hidden>No upcoming events are currently listed. Join the
+<a href="https://docs.google.com/forms/d/1oMJsVJkM6n7hNfbuL2tKcwhv7Unva1_OPeWaLj6GR7Y/viewform">mailing
+list</a> to get meeting notices from the Secretary.</p>
+<h3>Archive</h3>
+<div id="past">
+  <div class="card event" data-date="2026-11-03">
+    <h3>General Election — November 3, 2026</h3>
+    <p>The 2026 general election, with the party's certified nominees on the ballot.
+    See <a href="candidates.html">2026 Nominees</a>.</p>
+  </div>
+</div>
+<script>
+(function(){
+  var today = new Date(); today.setHours(0,0,0,0);
+  var past = document.getElementById('past');
+  var upcoming = document.getElementById('upcoming');
+  Array.prototype.forEach.call(document.querySelectorAll('#upcoming .event'), function(el){
+    var d = new Date(el.getAttribute('data-date') + 'T00:00:00');
+    if (d < today) { past.appendChild(el); }
+  });
+  if (!upcoming.querySelector('.event')) {
+    document.getElementById('no-upcoming').hidden = false;
+  }
+})();
+</script>
+
+</main>
+<footer><div class="wrap">
+
+<p><strong>Democratic Party of Lonoke County</strong> · Lonoke County, Arkansas<br>
+Email: <a href="mailto:demsoflonokeco@gmail.com">demsoflonokeco@gmail.com</a> · Phone: <a href="tel:+15017120245">(501) 712-0245</a></p>
+<p class="small">Our state and national party: <a href="https://arkdems.org">Democratic Party of Arkansas (arkdems.org)</a> ·
+<a href="https://democrats.org">Democratic National Committee (democrats.org)</a> ·
+<a href="https://ydarkansas.org">Young Democrats of Arkansas</a></p>
+<p class="small">© 2026 Democratic Party of Lonoke County. This is a review build parked on GitHub Pages;
+the party's live site remains at dplc.us until the committee decides otherwise.</p>
+
+</div></footer>
+</body>
+</html>
